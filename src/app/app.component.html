@@ -1,3 +1,14 @@
-<p>
-  have fun :)
-</p>
+<div class="app-container">
+<div class="d-flex parent" *ngIf="tourData">
+  <div class="tour-name"> {{ tourData.tourName }} </div>
+  <div class="d-flex">
+    <div *ngFor="let trolley of tourData.trolleys" >
+      <div class="d-flex-vertical" [ngClass]="{'greyOut': trolleyCheck(trolley.trolleyId) == false }">
+        <div class="serial-no">{{ trolley.serial }}</div>
+        <div class="trolley-icon set-trolley"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-tour [tourData]="tourData" [trolleyData]="trolleyData"> </app-tour>
+</div>

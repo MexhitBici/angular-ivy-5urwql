@@ -1,0 +1,30 @@
+<div class="trolley">
+<div class="d-flex sp-b">
+  <div class="">
+    <div class="trolley-head-text">{{ trolley.cpackinglist }}</div>
+    <div class="trolley-content-text">{{ trolley.ctext }}</div>
+  </div>
+  <div class="d-flex">
+    <div *ngFor="let prodLabel of trolley.prodLabels; let i = index">
+      <div class="d-flex-vertical">
+        <div class="label-count">{{ prodLabel.nlabelCount }}</div>
+        <div
+          class="cube"
+          [ngClass]="{
+            'cube-gray': !prodLabel.trolley,
+            'cube-orange':
+              prodLabel.trolley &&
+              prodLabel.trolley.trolleyId === trolley.trolleyId,
+            'cube-blue':
+              prodLabel.trolley &&
+              prodLabel.trolley.trolleyId !== trolley.trolleyId
+          }"
+        >
+          <div class="tray-size"> {{ prodLabel.ntraySize }}  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="packed-qty">{{ this.sum }}x</div>
+</div>
+</div>

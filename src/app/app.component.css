@@ -1,0 +1,32 @@
+.app-container {
+  background-color: #d6d2d2;
+  padding: 10px 5px;
+}
+.d-flex.parent {
+  justify-content: center;
+  align-items: center;
+}
+.tour-name {
+  font-weight: 600;
+  margin-top: 16px;
+}
+.set-trolley {
+  height: 40px;
+  width: 35px;
+  margin-left: 6px;
+}
+.serial-no {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(0, 174, 255);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+}
+.greyOut {
+  opacity: 0.5;
+}
