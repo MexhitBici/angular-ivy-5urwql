@@ -1,0 +1,18 @@
+{
+  "nppmTourKey": 33377,
+  "tourName": "Tour #1 - Halal",
+  "trolleys": [
+    {
+      "trolleyId": 5551,
+      "serial": 1
+    },
+    {
+      "trolleyId": 5552,
+      "serial": 2
+    },
+    {
+      "trolleyId": 5553,
+      "serial": 3
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "trolleyId": 5551,
+    "trolleyName": "Trolley 1",
+    "cpackinglist": "FEKHA2A123A",
+    "ctext": "BC HM SNK Foccacia Chicken Caesar",
+    "nbatchSeqSize": 150,
+    "nbatchSeq": 54752331,
+    "nlabelMax": 3,
+    "prodLabels": [
+      {
+        "nppmProdLabelKey": 20296772,
+        "nbatchSeq": 54752331,
+        "nlabelCount": 1,
+        "nlabelMax": 3,
+        "ntraySize": 50,
+        "trolley": {
+          "trolleyId": 5551
+        }
+      },
+      {
+        "nppmProdLabelKey": 20296773,
+        "nbatchSeq": 54752331,
+        "nlabelCount": 2,
+        "nlabelMax": 3,
+        "ntraySize": 50,
+        "trolley": {
+          "trolleyId": 5552
+        }
+      },
+      {
+        "nppmProdLabelKey": 20296774,
+        "nbatchSeq": 54752331,
+        "nlabelCount": 3,
+        "nlabelMax": 3,
+        "ntraySize": 50,
+        "trolley": null
+      }
+    ]
+  },
+  {
+    "trolleyId": 5552,
+    "trolleyName": "Trolley 2",
+    "cpackinglist": "FEKHA2A123A",
+    "ctext": "BC HM SNK Foccacia Chicken Caesar",
+    "nbatchSeqSize": 150,
+    "nbatchSeq": 54752331,
+    "nlabelMax": 3,
+    "prodLabels": [
+      {
+        "nppmProdLabelKey": 20296772,
+        "nbatchSeq": 54752331,
+        "nlabelCount": 1,
+        "nlabelMax": 3,
+        "ntraySize": 50,
+        "trolley": {
+          "trolleyId": 5551
+        }
+      },
+      {
+        "nppmProdLabelKey": 20296773,
+        "nbatchSeq": 54752331,
+        "nlabelCount": 2,
+        "nlabelMax": 3,
+        "ntraySize": 50,
+        "trolley": {
+          "trolleyId": 5552
+        }
+      },
+      {
+        "nppmProdLabelKey": 20296774,
+        "nbatchSeq": 54752331,
+        "nlabelCount": 3,
+        "nlabelMax": 3,
+        "ntraySize": 50,
+        "trolley": null
+      }
+    ]
+  }
+]
