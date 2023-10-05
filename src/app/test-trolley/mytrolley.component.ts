@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SumItemService } from '../add-item.service';
 
 @Component({
@@ -10,11 +9,16 @@ import { SumItemService } from '../add-item.service';
 export class TrolleyComponent implements OnInit {
   @Input() trolley: any;
   sum = 0;
+
+  // Inject the SumItemService into the component
   constructor(private sumItemService: SumItemService) {}
 
   ngOnInit() {
-    let itemName = this.trolley.trolleyName;
-    let list = this.trolley.prodLabels;
+    // Extract trolleyName and prodLabels from the input trolley
+    const itemName = this.trolley.trolleyName;
+    const list = this.trolley.prodLabels;
+
+    // Calculate the sum of ntraySize using the SumItemService
     this.sum = this.sumItemService.addSumItem(itemName, list);
   }
 }

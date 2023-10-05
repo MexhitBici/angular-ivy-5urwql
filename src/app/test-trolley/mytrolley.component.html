@@ -1,30 +1,44 @@
+<!-- Container for a trolley -->
 <div class="trolley">
-<div class="d-flex sp-b">
-  <div class="">
-    <div class="trolley-head-text">{{ trolley.cpackinglist }}</div>
-    <div class="trolley-content-text">{{ trolley.ctext }}</div>
-  </div>
-  <div class="d-flex">
-    <div *ngFor="let prodLabel of trolley.prodLabels; let i = index">
-      <div class="d-flex-vertical">
-        <div class="label-count">{{ prodLabel.nlabelCount }}</div>
-        <div
-          class="cube"
-          [ngClass]="{
-            'cube-gray': !prodLabel.trolley,
-            'cube-orange':
-              prodLabel.trolley &&
-              prodLabel.trolley.trolleyId === trolley.trolleyId,
-            'cube-blue':
-              prodLabel.trolley &&
-              prodLabel.trolley.trolleyId !== trolley.trolleyId
-          }"
-        >
-          <div class="tray-size"> {{ prodLabel.ntraySize }}  </div>
+  <!-- Flexbox layout for spacing between elements -->
+  <div class="d-flex sp-b">
+    <!-- Left container for trolley details -->
+    <div>
+      <!-- Display the cpackinglist and ctext -->
+      <div class="trolley-head-text">{{ trolley.cpackinglist }}</div>
+      <div class="trolley-content-text">{{ trolley.ctext }}</div>
+    </div>
+
+    <!-- Right container for product labels -->
+    <div class="d-flex">
+      <!-- Loop through each prodLabel in trolley.prodLabels -->
+      <div *ngFor="let prodLabel of trolley.prodLabels; let i = index">
+        <!-- Container for a single product label -->
+        <div class="d-flex-vertical">
+          <!-- Display the label count -->
+          <div class="label-count">{{ prodLabel.nlabelCount }}</div>
+
+          <!-- Display a cube element with dynamic classes -->
+          <div
+            class="cube"
+            [ngClass]="{
+              'cube-gray': !prodLabel.trolley,
+              'cube-orange':
+                prodLabel.trolley &&
+                prodLabel.trolley.trolleyId === trolley.trolleyId,
+              'cube-blue':
+                prodLabel.trolley &&
+                prodLabel.trolley.trolleyId !== trolley.trolleyId
+            }"
+          >
+            <!-- Display the tray size -->
+            <div class="tray-size">{{ prodLabel.ntraySize }}</div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Display the total packed quantity (this.sum) -->
+    <div class="packed-qty">{{ this.sum }}x</div>
   </div>
-  <div class="packed-qty">{{ this.sum }}x</div>
-</div>
 </div>

@@ -1,32 +1,43 @@
+/* Styling for the outer container */
 .app-container {
-  background-color: #ad97bb;
-  padding: 10px 5px;
+  background-color: #ad97bb; /* Background color (a shade of purple) */
+  padding: 10px 5px; /* Padding around content */
 }
+
+/* Flexbox layout for centering content vertically and horizontally */
 .d-flex.parent {
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
 }
+
+/* Styling for the tour name */
 .tour-name {
-  font-weight: 600;
-  margin-top: 16px;
+  font-weight: 600; /* Bold font */
+  margin-top: 16px; /* Top margin spacing */
 }
+
+/* Styling for the set-trolley icon */
 .set-trolley {
-  height: 40px;
-  width: 35px;
-  margin-left: 6px;
+  height: 40px; /* Fixed height */
+  width: 35px; /* Fixed width */
+  margin-left: 6px; /* Left margin spacing */
 }
+
+/* Styling for the serial number label */
 .serial-no {
-  height: 20px;
-  width: 20px;
-  background-color: rgb(0, 174, 255);
-  color: white;
-  font-weight: 600;
-  text-align: center;
-  font-size: 12px;
-  line-height: 20px;
-  border-radius: 50%;
-  margin-bottom: 4px;
+  height: 25px; /* Fixed height */
+  width: 25px; /* Fixed width */
+  background-color: rgb(0, 174, 255); /* Background color (blue) */
+  color: white; /* Text color (white) */
+  font-weight: 600; /* Bold font */
+  text-align: center; /* Centered text alignment */
+  font-size: 12px; /* Font size */
+  line-height: 20px; /* Line height for vertically centered text */
+  border-radius: 50%; /* Rounded shape for circular appearance */
+  margin-bottom: 4px; /* Bottom margin spacing */
 }
+
+/* Styling to "grey out" elements by reducing opacity */
 .greyOut {
-  opacity: 0.3;
+  opacity: 0.3; /* Reduced opacity for a disabled appearance */
 }
