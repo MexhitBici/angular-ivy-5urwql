@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { SumItemService } from '../sum-item.service';
+import { SumItemService } from '../add-item.service';
 
 @Component({
   selector: 'app-trolley',
