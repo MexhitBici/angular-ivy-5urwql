@@ -1,6 +1,6 @@
 /* Styling for the outer container */
 .app-container {
-  background-color: #ad97bb; /* Background color (a shade of purple) */
+  background-color: #00b0d770; /* Background color (a shade of lightblue) */
   padding: 10px 5px; /* Padding around content */
 }
 
@@ -39,5 +39,5 @@
 
 /* Styling to "grey out" elements by reducing opacity */
 .greyOut {
-  opacity: 0.3; /* Reduced opacity for a disabled appearance */
+  opacity: 0.4; /* Reduced opacity for a disabled appearance */
 }
