@@ -2,8 +2,8 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tour',
-  templateUrl: './tour.component.html',
-  styleUrls: ['./tour.component.css'],
+  templateUrl: './mytour.component.html',
+  styleUrls: ['./mytour.component.css'],
 })
 export class TourComponent {
   @Input() tourData: any;
