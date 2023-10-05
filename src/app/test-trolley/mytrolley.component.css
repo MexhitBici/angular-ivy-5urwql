@@ -9,8 +9,8 @@
 
 /* Styling for cube elements */
 .cube {
-  height: 100px; /* Fixed height */
-  width: 100px; /* Fixed width */
+  height: 80px; /* Fixed height */
+  width: 80px; /* Fixed width */
   position: relative; /* Relative positioning for child elements */
 }
 
