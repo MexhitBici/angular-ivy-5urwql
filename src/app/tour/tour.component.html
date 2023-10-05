@@ -1,8 +1,11 @@
+<!-- Iterate over each trolley in the trolleyData array -->
 <div class="content" *ngFor="let trolley of trolleyData; let i = index">
-<div>
-  <div class="header-title">
-    {{ trolley.trolleyName }}
+  <div>
+    <!-- Display the trolleyName as the header title -->
+    <div class="header-title">
+      {{ trolley.trolleyName }}
+    </div>
+    <!-- Render the 'app-trolley' component with the current trolley as input -->
+    <app-trolley [trolley]="trolley"></app-trolley>
   </div>
-  <app-trolley [trolley]="trolley"></app-trolley>
-</div>
 </div>

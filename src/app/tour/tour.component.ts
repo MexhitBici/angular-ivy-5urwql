@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tour',
@@ -12,25 +11,37 @@ export class TourComponent {
 
   constructor() {}
 
+  // Toggle the accordion based on the index
   toggleAccordion(index: number) {
-    var chev = 'chevron' + index;
-    var ele = document.getElementById(chev);
-    if (!ele.classList.contains('open')) {
-      ele.setAttribute('src', './assets/chevron-up.svg');
-      ele.classList.add('open');
+    // Generate the ID for the chevron element
+    const chevronId = `chevron${index}`;
+
+    // Get the chevron element by ID
+    const chevronElement = document.getElementById(chevronId);
+
+    // Toggle the open class and update the chevron icon
+    if (!chevronElement.classList.contains('open')) {
+      chevronElement.setAttribute('src', './assets/chevron-up.svg');
+      chevronElement.classList.add('open');
     } else {
-      ele.setAttribute('src', './assets/chevron-down.svg');
-      ele.classList.remove('open');
+      chevronElement.setAttribute('src', './assets/chevron-down.svg');
+      chevronElement.classList.remove('open');
     }
 
     // Close other accordions except the clicked one
     this.trolleyData.forEach((trolley, i) => {
       if (i !== index) {
         trolley.isOpen = false;
-        var chevno = 'chevron' + i;
-        var elem = document.getElementById(chevno);
-        elem.classList.remove('open');
-        elem.setAttribute('src', './assets/chevron-down.svg');
+
+        // Generate the ID for the other chevron element
+        const otherChevronId = `chevron${i}`;
+
+        // Get the other chevron element by ID
+        const otherChevronElement = document.getElementById(otherChevronId);
+
+        // Remove the open class and update the chevron icon
+        otherChevronElement.classList.remove('open');
+        otherChevronElement.setAttribute('src', './assets/chevron-down.svg');
       }
     });
   }

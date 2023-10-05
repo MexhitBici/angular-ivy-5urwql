@@ -1,5 +1,5 @@
-import { Component, OnInit, VERSION } from '@angular/core';
-import { DataService } from './data-retreival.service';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'my-app',
@@ -11,25 +11,27 @@ export class AppComponent implements OnInit {
   trolleyData: any;
 
   constructor(private dataService: DataService) {}
+
   ngOnInit(): void {
-    this.dataService.getTourData().subscribe((data) => {
-      this.tourData = data;
+    // Fetch tour data and assign it to tourData
+    this.dataService.getTourData().subscribe((tourData) => {
+      this.tourData = tourData;
     });
 
-    this.dataService.getTrolleyData().subscribe((data) => {
-      this.trolleyData = data;
+    // Fetch trolley data and assign it to trolleyData
+    this.dataService.getTrolleyData().subscribe((trolleyData) => {
+      this.trolleyData = trolleyData;
     });
   }
 
-  trolleyCheck(tId: number): boolean {
+  // Check if a trolley with a given trolleyId exists in trolleyData
+  trolleyCheck(trolleyId: number): boolean {
     if (this.trolleyData) {
-      for (let i = 0; i < this.trolleyData.length; i++) {
-        const trolley = this.trolleyData[i];
-        if (trolley.trolleyId === tId) {
-          return true;
-        }
-      }
-      return false;
+      // Use Array.some() to check if any trolley has the specified trolleyId
+      return this.trolleyData.some(
+        (trolley) => trolley.trolleyId === trolleyId
+      );
     }
+    return false; // Return false if trolleyData is undefined
   }
 }

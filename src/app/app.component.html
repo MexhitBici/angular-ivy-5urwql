@@ -1,14 +1,26 @@
+<!-- The outer container for the app -->
 <div class="app-container">
-<div class="d-flex parent" *ngIf="tourData">
-  <div class="tour-name"> {{ tourData.tourName }} </div>
-  <div class="d-flex">
-    <div *ngFor="let trolley of tourData.trolleys" >
-      <div class="d-flex-vertical" [ngClass]="{'greyOut': trolleyCheck(trolley.trolleyId) == false }">
-        <div class="serial-no">{{ trolley.serial }}</div>
-        <div class="trolley-icon set-trolley"></div>
+  <!-- Check if tourData exists before rendering the content -->
+  <div class="d-flex parent" *ngIf="tourData">
+    <!-- Display the tour name -->
+    <div class="tour-name">{{ tourData.tourName }}</div>
+    <div class="d-flex">
+      <!-- Loop through each trolley in the tourData.trolleys array -->
+      <div *ngFor="let trolley of tourData.trolleys">
+        <!-- Each trolley is wrapped in a vertical container -->
+        <div
+          class="d-flex-vertical"
+          [ngClass]="{ greyOut: !trolleyCheck(trolley.trolleyId) }"
+        >
+          <!-- Display the serial number of the trolley -->
+          <div class="serial-no">{{ trolley.serial }}</div>
+          <!-- Display the trolley icon with the class 'set-trolley' -->
+          <div class="trolley-icon set-trolley"></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<app-tour [tourData]="tourData" [trolleyData]="trolleyData"> </app-tour>
+
+  <!-- Include the 'app-tour' component with tourData and trolleyData as inputs -->
+  <app-tour [tourData]="tourData" [trolleyData]="trolleyData"></app-tour>
 </div>
