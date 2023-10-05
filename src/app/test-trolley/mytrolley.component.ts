@@ -4,8 +4,8 @@ import { SumItemService } from '../add-item.service';
 
 @Component({
   selector: 'app-trolley',
-  templateUrl: './trolley.component.html',
-  styleUrls: ['./trolley.component.css', '../../styles.css'],
+  templateUrl: './mytrolley.component.html',
+  styleUrls: ['./mytrolley.component.css', '../../styles.css'],
 })
 export class TrolleyComponent implements OnInit {
   @Input() trolley: any;
